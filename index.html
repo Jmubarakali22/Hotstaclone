@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shotcut icon" href="data:image/jpeg;base64,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">
+    <title>Hotstar Clone</title>
+    <!-- carousel copy from bottstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD" crossorigin="anonymous"></script>
+    <style>
+      html{
+        scroll-behavior: smooth;
+      }
+        body{
+            margin: 0;
+            background-color: rgb(97, 21, 21);
+        }
+        .nav-bar{
+            height: 60px;
+            width: 100%;
+            /* border: solid; */
+            display: flex;
+            align-items: center;
+            background-color: rgb(0, 0, 0);
+            position: fixed;
+            top: 0;
+            z-index: 1000;
+            /* z index will give the img or element in front of other elements and no. should be according to how many to overcome  */
+        } 
+        .nav-items{            
+            position: absolute;
+            right: 20px;
+            word-spacing: 8px;
+        }
+        .nav-items a{
+            color: whitesmoke;
+            font-size: 20px;
+            text-decoration: none;
+            font-family: tahoma;
+            
+        }
+        .nav-logo img{
+            width: 140px;
+        }
+        .nav-items a:hover{
+            text-decoration: underline;
+            color: blue;
+        }
+        
+         .home{
+          margin: 30px 0px 30px 0px;
+          
+        }
+        .carousel-inner img{
+            height:520px; 
+            width:90%;
+            margin: auto; 
+            margin-top: 40px;
+            margin-left: 65px;
+            border-radius: 15px;
+        }
+        #lt{          
+          margin-bottom: 100px;
+        }s
+        h2{
+          color: whitesmoke;
+          font-size: 23px;
+          text-decoration: none;
+          font-family: tahoma;
+          margin-top: 40px;
+          margin-left: 15px;
+        }
+        h2:hover{
+          text-decoration: underline;
+          color: blue;
+        }
+        .latTrent{
+          display: flex;
+          align-items: center;
+          justify-content: space-around;
+          flex-wrap: wrap;
+          margin-top: 20px;
+         
+        }
+        .latTrent img{
+          width: 15%;
+          height: 100%;
+          /* clip-path: inset(5px 0px 10px 0px); */
+          margin-top: 20px;
+          margin-left: 15px;
+        }
+        .latTrent img:hover{
+          transform: scale(1.3);
+          transition: all .5s ease-in-out;
+          z-index: 1;
+          border-radius: 20px ;
+        }
+
+        #rt{          
+          margin-bottom: 100px;
+        }
+        .recent{
+          display: flex;
+          align-items: center;
+          justify-content: space-around;
+          flex-wrap: wrap;
+          margin-top: 20px;
+         
+        }
+        .recent img{
+          width: 15%;
+          height: 100%;
+          /* clip-path: inset(5px 0px 10px 0px); */
+          margin-top: 20px;
+          margin-left: 12px;
+        }
+        .recent img:hover{
+          transform: scale(1.3);
+          transition: all .5s ease-in-out;
+          z-index: 1;
+          border-radius: 20px ;
+        }
+
+        #fv{          
+          margin-bottom: 100px;
+        }
+        .favourite{
+          display: flex;
+          align-items: center;
+          justify-content: space-around;
+          flex-wrap: wrap;
+          margin-top: 20px;
+         
+        }
+        .favourite img{
+          width: 15%;
+          height: 100%;
+          /* clip-path: inset(5px 0px 10px 0px); */
+          margin-top: 20px;
+          margin-left: 15px;
+        }
+        .favourite img:hover{
+          transform: scale(1.3);
+          transition: all .5s ease-in-out;
+          z-index: 1;
+          border-radius: 20px ;
+        }
+        .about {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            word-spacing: 50px;
+        }
+        .about a{
+          color: whitesmoke;
+            font-size: 15px;
+            text-decoration: none;
+        }
+        .about a:hover{
+          color: blue;
+          text-decoration: underline;
+        }
+        .about-text{
+            height: 60px;
+            width: 680px;
+        }
+        .about-text p{
+          color: white;
+          text-align: justify;
+         
+        }
+        .about-social img{
+          border-radius: 100%;
+          height: 40px;
+          width: 40px;
+          /* display: flex; */
+          position: relative;
+          left: 780px;
+          bottom: 50px;
+        }
+        .about-play img{
+        
+          height: 40px;
+          width: 150px;
+          position: relative;
+          left: 920px;
+          bottom: 90px;
+        }
+    </style>
+</head>
+<body>
+<!-- Nav Bar Starts -->
+<div class="nav-bar">
+    <div class="nav-logo">
+        <img src="https://secure-media.hotstarext.com/web-assets/prod/images/brand-logos/disney-hotstar-logo-dark.svg" alt="" >
+    </div>
+    <div class="nav-items">
+        <a href="#home">Home</a>
+        <a href="#lt">Latest&ampTrending</a>
+        <a href="#rt">Recent</a>
+        <a href="#fv">Favourites</a>
+        <a href="singin.html">Sign-in</a>
+        <a href="#abt">About</a>
+    </div>
+</div>
+<!-- Nav Bar Ends -->
+
+<!-- Home section Starts  -->
+<div class="home" id="home">
+    <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="https://img1.hotstarext.com/image/upload/f_auto,t_web_vl_3x/sources/r1/cms/prod/5421/1445421-v-06772ee1734c" class="d-block" alt="..." >
+          </div>
+          <div class="carousel-item">
+            <img src="https://img1.hotstarext.com/image/upload/f_auto,t_web_m_1x/sources/r1/cms/prod/9309/1479309-h-ec1f153517f1" class="d-block " alt="..." >
+          </div>
+          <div class="carousel-item">
+            <img src="https://img1.hotstarext.com/image/upload/f_auto,t_web_m_1x/sources/r1/cms/prod/4266/1364266-h-470552ba960d" class="d-block " alt="...">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+</div>
+<!-- Home section Ends  -->
+
+<!-- Latest&Trending Section Starts  -->
+<h5 id="lt"></h5>
+<h2>Latest&Trending</h2> 
+<div class="latTrent">  
+    <img src="https://img1.hotstarext.com/image/upload/f_auto,t_web_vl_3x/sources/r1/cms/prod/1746/1481746-v-e625327a9655" alt="" height="400px" width="500px">
+    <img src="https://img1.hotstarext.com/image/upload/f_auto,t_web_vl_3x/sources/r1/cms/prod/9310/1479310-v-644f76c4ffe5" alt="" height="400px" width="500px">
+    <img src="https://img1.hotstarext.com/image/upload/f_auto,t_web_vl_3x/sources/r1/cms/prod/8739/1478739-v-4b473ba61414" alt="" height="400px" width="500px">
+    <img src="https://img1.hotstarext.com/image/upload/f_auto,t_web_vl_3x/sources/r1/cms/prod/8478/1478478-v-3a45a2ae5b3e" alt="" height="400px" width="500px"> 
+    <img src="https://img1.hotstarext.com/image/upload/f_auto,t_web_vl_3x/sources/r1/cms/prod/7220/1467220-v-b63ce1315786" alt="">
+    <img src="https://img1.hotstarext.com/image/upload/f_auto,t_web_vl_3x/sources/r1/cms/prod/6675/1476675-v-582634b7d3fb" alt="">
+    <img src="https://img1.hotstarext.com/image/upload/f_auto,t_web_vl_3x/sources/r1/cms/prod/6693/1476693-v-f43674c07ba5" alt="">
+    <img src="https://img1.hotstarext.com/image/upload/f_auto,t_web_vl_3x/sources/r1/cms/prod/7655/1487655-v-a49ecf3c4d6d" alt="">
+    <img src="https://img1.hotstarext.com/image/upload/f_auto,t_web_vl_3x/sources/r1/cms/prod/9847/1469847-v-8ccfe08829e1" alt="">
+    <img src="https://img1.hotstarext.com/image/upload/f_auto,t_web_vl_3x/sources/r1/cms/prod/7494/1487494-v-fa65c4bdf9be" alt="">
+    <img src="https://img1.hotstarext.com/image/upload/f_auto,t_web_vl_3x/sources/r1/cms/prod/7241/1467241-v-39c956e4a38e" alt="">
+    <img src="https://img1.hotstarext.com/image/upload/f_auto,t_web_vl_3x/sources/r1/cms/prod/5120/1455120-v-114e62176f39" alt="">
+  
+</div>
+<!-- Latest&Trending Section Ends  -->
+
+<!-- Recent section Starts  -->
+<h5 id="rt"></h5>
+<h2>Recent</h2> 
+<div class="recent">  
+    <img src="https://img1.hotstarext.com/image/upload/f_auto,t_web_vl_3x/sources/r1/cms/prod/5052/1405052-v-2063bab41935" alt="">
+        <img src="https://img1.hotstarext.com/image/upload/f_auto,t_web_vl_3x/sources/r1/cms/prod/896/580896-v" alt="">
+        <img src="https://img1.hotstarext.com/image/upload/f_auto,t_web_vl_3x/sources/r1/cms/prod/old_images/vertical/MOVIE/3314/1770003314/1770003314-v" alt="">
+        <img src="https://img1.hotstarext.com/image/upload/f_auto,t_web_vl_3x/sources/r1/cms/prod/1252/1431252-v-016aa839d740" alt="">
+        <img src="https://img1.hotstarext.com/image/upload/f_auto,t_web_vl_3x/sources/r1/cms/prod/old_images/vertical/MOVIE/1777/1000071777/1000071777-v" alt="">
+        <img src="https://img1.hotstarext.com/image/upload/f_auto,t_web_vl_3x/sources/r1/cms/prod/7608/1487608-v-75163c4053b5" alt="">
+        <img src="https://img1.hotstarext.com/image/upload/f_auto,t_web_vl_3x/sources/r1/cms/prod/8105/1118105-v-cf275eb3c3f2" alt="">
+        <img src="https://img1.hotstarext.com/image/upload/f_auto,t_web_vl_3x/sources/r1/cms/prod/old_images/vertical/MOVIE/4578/1000154578/1000154578-v" alt="">
+        <img src="https://img1.hotstarext.com/image/upload/f_auto,t_web_vl_3x/sources/r1/cms/prod/4789/1434789-v-1452aa371a60" alt="">
+        <img src="https://img1.hotstarext.com/image/upload/f_auto,t_web_vl_3x/sources/r1/cms/prod/5462/245462-v" alt="">
+        <img src="https://img1.hotstarext.com/image/upload/f_auto,t_web_vl_3x/sources/r1/cms/prod/7046/1317046-v-22f4f58b897e" alt="">
+        <img src="https://img1.hotstarext.com/image/upload/f_auto,t_web_vl_3x/sources/r1/cms/prod/old_images/vertical/MOVIE/5403/1770015403/1770015403-v" alt="">
+      
+</div>
+<!-- Recent Section Ends  -->
+
+<!-- Favourite section Starts  -->
+<h5 id="fv"></h5>
+<h2>Favourites</h2> 
+<div class="favourite">  
+    <img src="https://img1.hotstarext.com/image/upload/f_auto,t_web_vl_3x/sources/r1/cms/prod/6536/846536-v" alt="">
+        <img src="https://img1.hotstarext.com/image/upload/f_auto,t_web_vl_3x/sources/r1/cms/prod/2108/1492108-v-45357ed549b6" alt="">
+        <img src="https://img1.hotstarext.com/image/upload/f_auto,t_web_vl_3x/sources/r1/cms/prod/3953/673953-v" alt="">
+        <img src="https://img1.hotstarext.com/image/upload/f_auto,t_web_vl_3x/sources/r1/cms/prod/2445/1462445-v-2a48363cb7e6" alt="">
+        <img src="https://img1.hotstarext.com/image/upload/f_auto,t_web_vl_3x/sources/r1/cms/prod/5180/875180-v" alt="">
+        <img src="https://img1.hotstarext.com/image/upload/f_auto,t_web_vl_3x/sources/r1/cms/prod/8987/1488987-v-1e0c4d668e0a" alt="">
+        <img src="https://img1.hotstarext.com/image/upload/f_auto,t_web_vl_3x/sources/r1/cms/prod/1248/1431248-v-af62a54a6d8d" alt="">
+        <img src="https://img1.hotstarext.com/image/upload/f_auto,t_web_vl_3x/sources/r1/cms/prod/1992/311992-v" alt="">
+        <img src="https://img1.hotstarext.com/image/upload/f_auto,t_web_vl_3x/sources/r1/cms/prod/old_images/vertical/SHOW/527/527/527-v" alt="">
+        <img src="https://img1.hotstarext.com/image/upload/f_auto,t_web_vl_3x/sources/r1/cms/prod/old_images/vertical/SHOW/6363/6363/6363-v" alt="">
+        <img src="https://img1.hotstarext.com/image/upload/f_auto,t_web_vl_3x/sources/r1/cms/prod/old_images/vertical/SHOW/152/152/152-v" alt="">
+        <img src="https://img1.hotstarext.com/image/upload/f_auto,t_web_vl_3x/sources/r1/cms/prod/3118/1023118-v-37c628e38897" alt="">  
+</div><br><br>
+<!-- favourite Section Ends  -->
+ <!-- about starts -->
+ <div class="about" id="abt">
+  <a href="https://www.hotstar.com/in/about-us">AboutDisney+Hotstar</a>    
+  <a href="https://www.hotstar.com/in/terms-of-use">TermsofUse</a>    
+  <a href="https://www.hotstar.com/in/privacy-policy">PrivacyPolicy</a> 
+  <a href="https://help.hotstar.com/in/en/support/home">FAQ</a>   
+  <a href="https://help.hotstar.com/in/en/support/tickets/new">Feedback</a>  
+  <a href="https://careers.hotstar.com/">Careers</a> 
+  <a href="##">ConnectwithUS</a>  
+  <a href="##">Disney+HotstarApp</a>
+  </div>   
+  <div class="about-text">
+    <p> © 2023 STAR. All Rights Reserved. HBO, Home Box Office and all related channel and programming logos are service marks of, and all related programming visuals and elements are the property of, Home Box Office, Inc. All rights reserved.</p>
+  </div>
+  <div class="about-social">
+    <a href="https://www.facebook.com/DisneyPlusHotstar"><img src="fack.png" alt=""></a>
+    <a href="https://twitter.com/DisneyPlusHS"><img src="twit.png" alt=""></a>
+  </div>
+  <div class="about-play">
+    <a href="https://play.google.com/store/apps/details?id=in.startv.hotstar"><img src="google-playstore.webp" alt=""></a>
+    <a href="https://apps.apple.com/in/app/hotstar/id934459219"><img src="ios-appstore.webp" alt=""></a>
+  </div>
+<!-- about ends -->
+</body>
+</html>
